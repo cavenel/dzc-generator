@@ -103,9 +103,9 @@ void build_collection( string input_directory, string output_directory, string o
     upper << output_directory << output_name << "_files/" << level << "/";
     g_mkdir(current.str().c_str(), 0777);
     struct stat buf;
-    for(int i = 1; i < size; i+=2)
+    for(int i = 1; i < size+1; i+=2)
     {
-      for(int j = 1; j < size; j+=2)
+      for(int j = 1; j < size+1; j+=2)
       {
         if( stat( (char *)upper.str().append(to_string(i)+"_"+to_string(j)+".jpg").c_str(), &buf) == 0 )
         {
